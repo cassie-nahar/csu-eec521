@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="280px" preserveAspectRatio="none" style="width:564px;height:280px;" version="1.1" viewBox="0 0 564 280" width="564px" zoomAndPan="magnify"><defs><filter height="300%" id="fu9m30dc4vbit" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="431" x="73" y="16.708">Distributed Remote Environment Sensor System</text><!--MD5=[0727afd736e97a87aa1e06bad19d03c9]
+cluster DPS--><polygon fill="#FFFFFF" filter="url(#fu9m30dc4vbit)" points="87.5,54.9531,97.5,44.9531,542.5,44.9531,542.5,151.9531,532.5,161.9531,87.5,161.9531,87.5,54.9531" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="532.5" x2="541.5" y1="54.9531" y2="45.9531"/><line style="stroke: #000000; stroke-width: 1.5;" x1="87.5" x2="532.5" y1="54.9531" y2="54.9531"/><line style="stroke: #000000; stroke-width: 1.5;" x1="532.5" x2="532.5" y1="54.9531" y2="161.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="229" x="196.5" y="70.9482">Data Processing and Storage</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="43" x="289.5" y="87.2451">(DPS)</text><!--MD5=[beb5ad5244d3d849df9473931f7c2e5e]
+entity GUI--><polygon fill="#FFFFFF" filter="url(#fu9m30dc4vbit)" points="6,215.9531,16,205.9531,135,205.9531,135,258.5469,125,268.5469,6,268.5469,6,215.9531" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="125" x2="134" y1="215.9531" y2="206.9531"/><line style="stroke: #000000; stroke-width: 1.5;" x1="6" x2="125" y1="215.9531" y2="215.9531"/><line style="stroke: #000000; stroke-width: 1.5;" x1="125" x2="125" y1="215.9531" y2="268.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="89" x="21" y="238.9482">Graphic User</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="60" x="21" y="255.2451">Interface</text><!--MD5=[ea87969fc35f1ca5453e0a1ca338bac3]
+entity DP--><rect fill="#FEFECE" filter="url(#fu9m30dc4vbit)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="133" x="272" y="105.4531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="267" y="110.4531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="267" y="131.75"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="113" x="282" y="128.4482">Data Processing</text><!--MD5=[2c8bfc6f691a2260a342f8a3a45a5f4e]
+entity MB--><rect fill="#FEFECE" filter="url(#fu9m30dc4vbit)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="133" x="104" y="105.4531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="99" y="110.4531"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="99" y="131.75"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="113" x="114" y="128.4482">Message Broker</text><!--MD5=[fa1e3283224feb76407c84b7e90ed808]
+entity Database--><path d="M440.5,110.9531 C440.5,100.9531 483.5,100.9531 483.5,100.9531 C483.5,100.9531 526.5,100.9531 526.5,110.9531 L526.5,136.25 C526.5,146.25 483.5,146.25 483.5,146.25 C483.5,146.25 440.5,146.25 440.5,136.25 L440.5,110.9531 " fill="#FEFECE" filter="url(#fu9m30dc4vbit)" style="stroke: #000000; stroke-width: 1.5;"/><path d="M440.5,110.9531 C440.5,120.9531 483.5,120.9531 483.5,120.9531 C483.5,120.9531 526.5,120.9531 526.5,110.9531 " fill="none" style="stroke: #000000; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="66" x="450.5" y="137.9482">Database</text><!--MD5=[758202a8d762072e72a724c4edfe1644]
+entity RSM--><polygon fill="#FFFFFF" filter="url(#fu9m30dc4vbit)" points="170,224.4531,180,214.4531,373,214.4531,373,250.75,363,260.75,170,260.75,170,224.4531" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="363" x2="372" y1="224.4531" y2="215.4531"/><line style="stroke: #000000; stroke-width: 1.5;" x1="170" x2="363" y1="224.4531" y2="224.4531"/><line style="stroke: #000000; stroke-width: 1.5;" x1="363" x2="363" y1="224.4531" y2="260.75"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="163" x="185" y="247.4482">Remote Sensor Module</text><!--MD5=[230971173b776d653f77c036a9049182]
+link MB to GUI--><path d="M155.312,141.4631 C140.123,158.4751 116.424,185.018 97.935,205.7259 " fill="none" id="MB-GUI" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[cd7295cac9aa7207aa4eea8eeb5408e6]
+link MB to RSM--><path d="M185.84,141.4631 C203.388,160.9231 232.182,192.8534 251.483,214.2565 " fill="none" id="MB-RSM" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[540d167f20b4789068262bd9869640e9]
+link MB to DP--><path d="M237.109,123.4531 C248.727,123.4531 260.345,123.4531 271.962,123.4531 " fill="none" id="MB-DP" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[5e04bc1064df9ece7ebbbce3cee903df]
+link DP to Database--><path d="M405.053,123.4531 C416.799,123.4531 428.546,123.4531 440.293,123.4531 " fill="none" id="DP-Database" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[a95067c994e4ef782a52380313cdab69]
+@startuml
+title Distributed Remote Environment Sensor System
+ 
+node "Graphic User\nInterface" as GUI {
+} 
+
+node "Data Processing and Storage\n(DPS)" as DPS {
+    component [Data Processing] as DP
+    component [Message Broker] as MB
+    database "Database"
+} 
+
+node "Remote Sensor Module" as RSM {
+} 
+
+
+GUI -up- MB
+RSM -up- MB
+MB -right- DP
+Database -left- DP
+@enduml
+
+PlantUML version 1.2019.11(Sun Sep 22 10:02:15 UTC 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.7.0_25-b15
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
