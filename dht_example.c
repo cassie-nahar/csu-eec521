@@ -1,4 +1,4 @@
-#include <wiringPi.h>
+#include <wiringPi.h> // git://git.drogon.net/wiringPi
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
