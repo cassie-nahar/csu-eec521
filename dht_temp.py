@@ -10,7 +10,7 @@ from numpy import mean
 ######### BEGIN CONFIG #########
 
 SENSOR_NUMBER = "212-3" # taken from the network port label on the wall
-record_frequency = timedelta(0,10,0) # 0 seconds
+record_frequency = timedelta(0,30,0) # 30 seconds
 db = MySQLdb.connect("10.254.254.101", "monitor", "monitor", "GRC_B50_ATMOSPHERIC")
 
 ########## END CONFIG ##########
