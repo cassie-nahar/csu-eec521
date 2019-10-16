@@ -2,7 +2,7 @@
 
 import sys
 import MySQLdb
-import Adafruit_DHT
+import Adafruit_DHT # https://github.com/adafruit/Adafruit_Python_DHT.git
 from datetime import datetime, timedelta
 from time import sleep
 from numpy import mean
