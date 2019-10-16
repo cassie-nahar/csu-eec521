@@ -2,7 +2,7 @@
 import sys
 from datetime import datetime, timedelta
 from numpy import mean
-import Adafruit_DHT
+import Adafruit_DHT # https://github.com/adafruit/Adafruit_Python_DHT.git
 
 next = datetime.now() + timedelta(seconds = 10)
 temp = []
