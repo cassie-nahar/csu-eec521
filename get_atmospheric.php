@@ -4,12 +4,12 @@
         die("ERROR: Unable to connect: " . $conn->connect_error);
     } 
     
-    if (!$result = $conn->query("SELECT * FROM DHT11 WHERE date(datetime) = CURDATE() ORDER BY datetime ASC LIMIT 10000")) {
+    if (!$result = $conn->query("SELECT TIME(datetime) as time, temperature FROM DHT11 WHERE DATE(datetime) = CURDATE() AND TIME(datetime) > DATE_SUB(CURTIME(), INTERVAL 30 MINUTE) ORDER BY datetime ASC")) {
         die ('There was an error running query[' . $connection->error . ']');
     }
     
     while ($row = $result->fetch_assoc()) {
-        echo 'data.addRow(["'.$row["datetime"].'",'.$row["temperature"].']);'."\r\n";
+        echo 'data.addRow(["'.$row["time"].'",'.$row["temperature"].']);'."\r\n";
     }
     
     $result->close();
