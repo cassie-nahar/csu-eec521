@@ -1,5 +1,6 @@
 #include <chrono>	// GetCurrentTimeString -> std::chrono
 #include <iomanip>	// GetCurrentTimeString -> std::put_time
+#include <sstream>
 
 #include <utilities/System/System.h>
 
