@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <meta charset="UTF-8">
+		<title>APC GUI Demo</title>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+				crossorigin="anonymous"></script>
+				</head>
+	<body>
+	    <image id="red_led" src="bullet_red.png" onclick="redClick()"></image>
+		<image id="green_led" src="bullet_green.png" onclick="greenClick()" style="display:none"></image>
+		<p id="timestamp"></p>
+
+        <script>
+		    function redClick() {
+			// TODO: Put an ajax post here to change the state.
+			$.post("/command", {state: "ON"}, function(data, status){
+			//alert("Data: " + data + "\nStatus: " + status);
+			});
+
+            }
+			function redLed() {
+			    document.getElementById("green_led").style.display = "none";
+				document.getElementById("red_led").style.display = "inline";
+				}
+
+            function greenClick() {
+			// TODO: Put an ajax post here to change the state.
+			$.post("/command", {state: "OFF"},function(data, status){
+			//alert("Data: " + data + "\nStatus: " + status);
+			});
+
+            }
+			function greenLed() {
+			    document.getElementById("red_led").style.display = "none";
+				document.getElementById("green_led").style.display = "inline";
+				}
+
+            function doAjax() {
+			    $.getJSON( "/status", function( data ) {
+				    $('#timestamp').text(data.timestamp);
+					if(data.state == "OFF") { redLed(); }
+					else if (data.state == "ON") { greenLed(); }
+					});
+				}
+			setInterval(doAjax, 1000);
+		</script>
+	</body>
+</html>

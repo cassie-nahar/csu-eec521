@@ -1,0 +1,6 @@
+bin/*
+docs/*
+deps/*
+*.user
+*.autosave
+QtCreatorDeployment.txt
