@@ -1,2 +1,2 @@
 language: cpp
-script: mkdir build && cd build && cmake .. && cmake --build . --target all --parallel $[`nproc`+1]
+script: mkdir build && cd build && cmake .. && cmake --build . --target all --parallel $[`nproc`+1] && cmake .. && cmake --build . --target all --parallel $[`nproc`+1]
