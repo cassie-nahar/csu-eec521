@@ -47,7 +47,7 @@ if(NOT TARGET CivetWeb::Library-CPP)
 	LIST(APPEND CivetWeb_PROCESS_LIBS civetweb_cpp_LIBRARY)
 endif()
 
-LIBFIND_PROCESS(Civet)
+LIBFIND_PROCESS(CivetWeb)
 
 FOREACH(component ${CivetWeb_PROCESS_INCLUDES})
     message(STATUS "  ${component} = ${${component}}")

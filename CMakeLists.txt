@@ -8,6 +8,7 @@ include(${CMAKE_SOURCE_DIR}/cmake/make_target.cmake)
 # NOTE: any external dependencies should be fully encapsulated in targets within the utilities directory
 add_subdirectory(${CMAKE_SOURCE_DIR}/utilities)
 
+# If we cannot build the WebServer utility library, then we cannot build the GUI
 if(TARGET WebServer)
 	make_target(EXECUTABLE GUI)
 	target_link_libraries(GUI PRIVATE WebServer)

@@ -1,14 +1,11 @@
 include(${CMAKE_SOURCE_DIR}/cmake/get_dependency.cmake)
 
-find_package(CivetWeb)
-
-if(NOT TARGET CivetWeb::Headers)
-	message(STATUS "Could not find CivetWeb. Acquiring it now. CMake will have to be re-run . . .")
-
+if (BUILD_CIVETWEB)
+	message (STATUS "Building CivetWeb. NOTE: The Civet::Library target will not be available until you re-run CMake.")
 	include(ExternalProject)
 
 	####### CivetWeb #######
-	ExternalProject_Add( civet
+	ExternalProject_Add( CivetWeb
 		GIT_REPOSITORY   https://github.com/civetweb/civetweb.git
 		GIT_TAG          ceda698 # This is when Link-time optimization became optional. No release since then yet (10/31/2019)
 		CMAKE_GENERATOR  ${CMAKE_GENERATOR}
@@ -28,9 +25,10 @@ if(NOT TARGET CivetWeb::Headers)
 						 -DCIVETWEB_ENABLE_WEBSOCKETS=ON
 						 -DCMAKE_CXX_FLAGS=-fPIC
 						 -DCMAKE_C_FLAGS=-fPIC
-						 -DCMAKE_INSTALL_PREFIX=${DRESS_DEPS_PATH}/civetweb
+						 -DCMAKE_INSTALL_PREFIX=${DRESS_DEPS_PATH}/CivetWeb
 	)
-
-    message(STATUS "CivetWeb has been acquired. Please re-run CMake.")
-
+else()
+	find_package(CivetWeb REQUIRED)
 endif()
+
+unset(BUILD_CIVETWEB CACHE)
