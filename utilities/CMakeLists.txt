@@ -16,5 +16,9 @@ if(TARGET CivetWeb::Headers)
 	target_link_libraries(WebServer PUBLIC System)
 endif()
 
-# MessageBrokerClient utility which encapsulates the SimpleAmqp library
-include(${CMAKE_SOURCE_DIR}/cmake/get_SimpleAmqp.cmake)
+# Database utility which encapsulates the MariaDb and MySQL libraries
+include(${CMAKE_SOURCE_DIR}/cmake/get_MariaDbCpp.cmake)
+if(TARGET MariaDbCpp::Library)
+	make_target(STATIC_LIBRARY Database)
+	target_link_libraries(Database PRIVATE MariaDbCpp::Library)
+endif()

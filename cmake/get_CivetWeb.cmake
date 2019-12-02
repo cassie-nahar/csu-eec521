@@ -1,7 +1,7 @@
 include(${CMAKE_SOURCE_DIR}/cmake/get_dependency.cmake)
 
 if (BUILD_CIVETWEB)
-	message (STATUS "Building CivetWeb. NOTE: The CivetWeb::Library target will not be available until you re-run CMake.")
+	message (WARNING "Building CivetWeb. NOTE: The CivetWeb::Library target will not be available until you re-run CMake.")
 	include(ExternalProject)
 
 	####### CivetWeb #######
