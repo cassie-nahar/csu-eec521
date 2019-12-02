@@ -55,7 +55,7 @@ endif()
 
 if(NOT TARGET MySQL::Library)
     FIND_LIBRARY(MySQL_LIBRARY
-                 NAMES mysqlclient
+		         NAMES mysqlclient mariadbclient
                  PATHS ${CMAKE_PREFIX_PATH}
 				 PATH_SUFFIXES lib lib/mysql lib64 lib64/mysql lib/${CMAKE_LIBRARY_ARCHITECTURE} lib/${CMAKE_LIBRARY_ARCHITECTURE}/mysql
                 )
