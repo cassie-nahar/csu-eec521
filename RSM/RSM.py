@@ -68,5 +68,5 @@ while True:
     try:
       db.rollback()
     except:
-      db = MySQLdb.connect("10.254.254.101", "monitor", "monitor", "GRC_B50_ATMOSPHERIC")
+      db = MySQLdb.connect(conn_IP, "monitor", "monitor", "DRESS_ATMOSPHERIC")
       dbCursor = db.cursor()
