@@ -15,6 +15,9 @@ if(TARGET WebServer AND TARGET Database)
 	target_link_libraries(GUI PRIVATE Database)
 endif()
 
+make_target(EXECUTABLE RSM)
+target_link_libraries(RSM PRIVATE SensorIO)
+
 project(DRESS) # Just to restore the top-level project name.
 
 # Non-Building target which contains other types of project files
