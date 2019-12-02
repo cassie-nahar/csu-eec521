@@ -23,7 +23,3 @@ if(TARGET MariaDbCpp::Library)
 	target_link_libraries(Database PRIVATE MariaDbCpp::Library)
 endif()
 
-# SensorIO utility which encapsulates the DHT11_IO library
-make_target(STATIC_LIBRARY SensorIO)
-target_link_libraries(SensorIO PUBLIC System)
-
