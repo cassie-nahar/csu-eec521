@@ -1,2 +1,11 @@
 language: cpp
-script: mkdir build && cd build && cmake .. && cmake --build . --target all --parallel $[`nproc`+1] && cmake .. && cmake --build . --target all --parallel $[`nproc`+1]
+script: 
+  - sudo apt-get remove --purge mysql-server mysql-client mysql-common
+  - sudo apt-get update
+  - sudo apt-get install mariadb-server libssl-dev
+  - mkdir build
+  - cd build
+  - cmake .. -DBUILD_CIVETWEB=ON -DBUILD_MARIADBCPP=ON
+  - cmake --build . --target all --parallel $[`nproc`+1]
+  - cmake ..
+  - cmake --build . --target all --parallel $[`nproc`+1]
