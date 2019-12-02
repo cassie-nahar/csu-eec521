@@ -71,6 +71,10 @@ macro(make_target TARGET_TYPE TARGET_PATH)
 	target_sources(${TARGET_NAME} PRIVATE ${CPP_FILES} ${C_FILES})
 	target_sources(${TARGET_NAME} PRIVATE ${HPP_FILES} ${H_FILES})
 
+	# Find Python files
+	file(GLOB_RECURSE PY_FILES ${TARGET_PATH}/*.py)
+	target_sources(${TARGET_NAME} PRIVATE ${PY_FILES})
+
 	# Find resource files for web pages
 	file(GLOB_RECURSE HTML_FILES ${TARGET_PATH}/*.html)
 	file(GLOB_RECURSE CSS_FILES ${TARGET_PATH}/*.css)
