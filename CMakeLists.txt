@@ -14,6 +14,8 @@ if(TARGET WebServer)
 	target_link_libraries(GUI PRIVATE WebServer)
 endif()
 
+make_target(EXECUTABLE RSM)
+
 project(DRESS) # Just to restore the top-level project name.
 
 # Non-Building target which contains other types of project files
