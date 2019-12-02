@@ -8,6 +8,9 @@ namespace DRESS {
 	class System {
 	public:
 		static std::string GetCurrentTimeString();
+		static bool GetNewValue();
+	private:
+		static bool _value;
 	};
 
 }

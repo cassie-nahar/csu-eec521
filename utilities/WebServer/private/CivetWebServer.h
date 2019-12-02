@@ -1,7 +1,6 @@
 #ifndef CIVETWEBSERVER_H
 #define CIVETWEBSERVER_H
 
-#include <thread>
 #include <CivetServer.h>
 #include <utilities/WebServer/WebServer.h>
 
@@ -9,54 +8,44 @@ namespace DRESS {
 
 	class CivetWebServer : public WebServer {
 	public:
-		CivetWebServer(int port);
-
-		// WebServer interface
-		bool Start() override;
-		bool Stop() override;
-		Status GetStatus() override;
-
-		bool GetNewValue();
+		CivetWebServer(int Port, std::string DocumentRoot = DRESS_WWW_DIR);  // DRESS_WWW_DIR is defined in utilities/CMakeLists.txt
+		void RegisterGetFileHandler(std::string URI, std::string FilePath) override;
+		void RegisterGetJsonHandler(std::string URI, std::string(*GetJsonObject)()) override;
+		void RegisterPostJsonHandler(std::string URI, void(*PostJsonObject)(const std::string & JsonObject)) override;
 
 	private:
-		const int _port;
-		Status _status;
-		bool _value;
+		CivetServer _Server;
 
-		std::thread _Server;
-		bool _StopNow;
+		using HandlerPtr_t = std::shared_ptr<CivetHandler>;
+		static HandlerPtr_t CreateGetFileHandler(std::string URI, std::string FilePath);
+		static HandlerPtr_t CreateGetJsonHandler(std::string URI, std::string(*GetJsonObject)());
+		static HandlerPtr_t CreatePostJsonHandler(std::string URI, void(*PostJsonObject)(const std::string & JsonObject));
 	};
 
-	/*!
-	 * \brief The CivetWebHandler abstract class ensures that our concrete handlers have a reference to our server instance
-	 */
-	class CivetWebHandler : public CivetHandler {
+	class GetFileHandler : public CivetHandler {
 	public:
-		CivetWebHandler() = delete;
-		CivetWebHandler(CivetWebServer*);
-	protected:
-		CivetWebServer* _server;
-	};
-
-	class GetIndexHandler : public CivetWebHandler {
-	public:
-		using CivetWebHandler::CivetWebHandler;
+		GetFileHandler(std::string FilePath);
 		bool handleGet(CivetServer *server, struct mg_connection *conn) override;
+	private:
+		std::string _FilePath;
 	};
 
-	class GetStatusHandler : public CivetWebHandler {
+	class GetJsonHandler : public CivetHandler {
 	public:
-		using CivetWebHandler::CivetWebHandler;
+		GetJsonHandler(std::string(*GetJsonObject)());
 		bool handleGet(CivetServer *server, struct mg_connection *conn) override;
+	private:
+		std::string(*_GetJsonObject)();
 	};
 
-	class PostDataHandler : public CivetWebHandler {
+	class PostJsonHandler : public CivetHandler {
 	public:
-		using CivetWebHandler::CivetWebHandler;
+		PostJsonHandler(void(*PostJsonObject)(const std::string & JsonObject));
 		bool handlePost(CivetServer *server, struct mg_connection *conn) override;
+	private:
+		void(*_PostJsonObject)(const std::string & JsonObject);
 	};
 
 }
-
 
 #endif // CIVETWEBSERVER_H
