@@ -11,15 +11,18 @@ script:
   - cmake --build . --target all --parallel $[`nproc`+1]
   - cmake ..
   - cmake --build . --target all --parallel $[`nproc`+1]
+
+after_success:
+
 addons:
   apt:
     packages:
 	  - doxygen
-script:
   - doxygen Doxyfile
 deploy:
   provider: pages
   skip_cleanup: true
+  keep_history: true
   local_dir: docs/html
   github_token: $GH_REPO_TOKEN
   on:

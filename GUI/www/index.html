@@ -10,7 +10,10 @@
 	</head>
 	<body>
 	    <div id="wrap">
-		    <div id="chart_div" style="height:500px;"></div>
+		    <div id="temperature_chart_div" style="height:500px;"></div>
+		</div>
+		<div id="wrap">
+		    <div id="humidity_chart_div" style="height:500px;"></div>
 		</div>
 
         <script type="text/javascript">
@@ -19,13 +22,19 @@
 			var newData;
 			function drawBasic() {
 			    $.get("db", "", function(newData) {
-				    var data = new google.visualization.DataTable();
-					data.addColumn('string', 'X');
-					data.addColumn('number', 'Temperature (°C)');
+				    var tempData = new google.visualization.DataTable();
+					tempData.addColumn('string', 'X');
+					tempData.addColumn('number', 'Temperature (°C)');
+					var humidityData = new google.visualization.DataTable();
+					humidityData.addColumn('string', 'X');
+					humidityData.addColumn('number', 'Humidity');
 					var result = JSON.parse(newData).result;
-					result.forEach(element => data.addRow([element.datetime,parseFloat(element.temperature)]));
+					result.forEach(element => {
+					    tempData.addRow([element.datetime,parseFloat(element.temperature)]);
+						humidityData.addRow([element.datetime,parseFloat(element.humidity)]);
+					});
 
-                    var options = {
+                    var tempOptions = {
 					    chartArea: {
 						    top: 20,
 							height: '75%'
@@ -39,8 +48,25 @@
 						}
 					};
 
-                    var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-					chart.draw(data, options);
+                    var humidityOptions = {
+					    chartArea: {
+						    top: 20,
+							height: '75%'
+						},
+						legend: {position: 'top'},
+						hAxis: {
+						    title: 'Time'
+						},
+						vAxis: {
+						    title: 'Humidity'
+						}
+					};
+
+                    var tempChart = new google.visualization.LineChart(document.getElementById('temperature_chart_div'));
+					tempChart.draw(tempData, tempOptions);
+
+                    var humidityChart = new google.visualization.LineChart(document.getElementById('humidity_chart_div'));
+					humidityChart.draw(tempData, humidityOptions);
 				});
 			};
 
