@@ -15,8 +15,7 @@ if(TARGET WebServer AND TARGET Database)
 	target_link_libraries(GUI PRIVATE Database)
 endif()
 
-make_target(EXECUTABLE RSM)
-target_link_libraries(RSM PRIVATE SensorIO)
+add_custom_target(RSM SOURCES RSM/RSM.py)
 
 project(DRESS) # Just to restore the top-level project name.
 
