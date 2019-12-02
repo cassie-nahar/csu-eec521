@@ -18,7 +18,7 @@ namespace DRESS {
 		 * \param port Optional parameter to specify a non-standard port for the server
 		 * \return A shared pointer to the new concrete WebServer
 		 */
-		static ptr_t CreateWebServer(int port = 80);
+		static ptr_t CreateWebServer(int Port = 80, std::string DocumentRoot = std::string());
 
 		virtual ~WebServer() = default;
 

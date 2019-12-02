@@ -8,7 +8,7 @@ namespace DRESS {
 
 	class CivetWebServer : public WebServer {
 	public:
-		CivetWebServer(int Port, std::string DocumentRoot = DRESS_WWW_DIR);  // DRESS_WWW_DIR is defined in utilities/CMakeLists.txt
+		CivetWebServer(int Port, std::string DocumentRoot);  // DRESS_WWW_DIR is defined in utilities/CMakeLists.txt
 		void RegisterGetFileHandler(std::string URI, std::string FilePath) override;
 		void RegisterGetJsonHandler(std::string URI, std::string(*GetJsonObject)()) override;
 		void RegisterPostJsonHandler(std::string URI, void(*PostJsonObject)(const std::string & JsonObject)) override;

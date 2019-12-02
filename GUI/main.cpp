@@ -7,7 +7,7 @@
 
 int main()
 {
-	auto server = DRESS::WebServer::CreateWebServer(8081);
+	auto server = DRESS::WebServer::CreateWebServer(8081, DRESS_WWW_DIR);
 
 	server->RegisterGetFileHandler("/index", "/index.html");
 

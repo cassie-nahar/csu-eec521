@@ -3,9 +3,8 @@
 
 namespace DRESS {
 
-	WebServer::ptr_t WebServer::CreateWebServer(int port) {
-		(void)port; // Disable unused-variable warning
-		return ptr_t(new CivetWebServer(port));
+	WebServer::ptr_t WebServer::CreateWebServer(int Port, std::string DocumentRoot) {
+		return ptr_t(new CivetWebServer(Port, DocumentRoot));
 	}
 
 }
