@@ -1,0 +1,163 @@
+\hypertarget{classWebServer}{}\section{Web\+Server Class Reference}
+\label{classWebServer}\index{Web\+Server@{Web\+Server}}
+
+
+The \hyperlink{classWebServer}{Web\+Server} class.  
+
+
+
+
+{\ttfamily \#include $<$Web\+Server.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classWebServer_a350f14f5d1522610502fb95f346e4a3c}{Status} \+: uint8\+\_\+t \{ \newline
+\hyperlink{classWebServer_a350f14f5d1522610502fb95f346e4a3ca1d451f0e2a986b2d755301fc16327831}{U\+N\+K\+N\+O\+WN} = 0, 
+\hyperlink{classWebServer_a350f14f5d1522610502fb95f346e4a3ca8dd909a7ebd4b0b25ef0af0c754deb53}{S\+T\+O\+P\+P\+ED} = 1, 
+\hyperlink{classWebServer_a350f14f5d1522610502fb95f346e4a3caf0cc930cb72ab6a5d0bca765bab81c19}{R\+U\+N\+N\+I\+NG} = 2, 
+\hyperlink{classWebServer_a350f14f5d1522610502fb95f346e4a3ca229029746647a912e8c8f8366f2efacb}{S\+T\+A\+R\+T\+I\+NG} = 3, 
+\newline
+\hyperlink{classWebServer_a350f14f5d1522610502fb95f346e4a3ca46f07f457962a112a550b7b69a7dcdb8}{S\+T\+O\+P\+P\+I\+NG} = 4, 
+\hyperlink{classWebServer_a350f14f5d1522610502fb95f346e4a3ca2187c4c7fce9bed9a2f66b8e835676e7}{E\+R\+R\+OR} = 5
+ \}\begin{DoxyCompactList}\small\item\em The Status enum Lists the possible states the \hyperlink{classWebServer}{Web\+Server} may take. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classWebServer_a456687b9d497b2810e3660f08bfa8462}{Web\+Server} (uint32\+\_\+t port=80)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classWebServer}{Web\+Server}. \end{DoxyCompactList}\item 
+bool \hyperlink{classWebServer_a0ce9a771f7adb84c47c748a9a19444fe}{Start} ()
+\begin{DoxyCompactList}\small\item\em Start. \end{DoxyCompactList}\item 
+bool \hyperlink{classWebServer_af27f38bac6c5f718ae25deeb3369fb8a}{Stop} ()
+\begin{DoxyCompactList}\small\item\em Stop. \end{DoxyCompactList}\item 
+\hyperlink{classWebServer_a350f14f5d1522610502fb95f346e4a3c}{Status} \hyperlink{classWebServer_a191564ab545bdb1aa90ed40cfa966836}{Get\+Status} ()
+\begin{DoxyCompactList}\small\item\em Get\+Status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classWebServer_a350f14f5d1522610502fb95f346e4a3c}{Status} \hyperlink{classWebServer_acde07bc97f932a6690ab659625309562}{\+\_\+status}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classWebServer}{Web\+Server} class. 
+
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_2}}
+\end{DoxyImageNoCaption}
+ 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classWebServer_a350f14f5d1522610502fb95f346e4a3c}\label{classWebServer_a350f14f5d1522610502fb95f346e4a3c}} 
+\index{Web\+Server@{Web\+Server}!Status@{Status}}
+\index{Status@{Status}!Web\+Server@{Web\+Server}}
+\subsubsection{\texorpdfstring{Status}{Status}}
+{\footnotesize\ttfamily enum \hyperlink{classWebServer_a350f14f5d1522610502fb95f346e4a3c}{Web\+Server\+::\+Status} \+: uint8\+\_\+t}
+
+
+
+The Status enum Lists the possible states the \hyperlink{classWebServer}{Web\+Server} may take. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+N\+K\+N\+O\+WN@{U\+N\+K\+N\+O\+WN}!Web\+Server@{Web\+Server}}\index{Web\+Server@{Web\+Server}!U\+N\+K\+N\+O\+WN@{U\+N\+K\+N\+O\+WN}}}\mbox{\Hypertarget{classWebServer_a350f14f5d1522610502fb95f346e4a3ca1d451f0e2a986b2d755301fc16327831}\label{classWebServer_a350f14f5d1522610502fb95f346e4a3ca1d451f0e2a986b2d755301fc16327831}} 
+U\+N\+K\+N\+O\+WN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+O\+P\+P\+ED@{S\+T\+O\+P\+P\+ED}!Web\+Server@{Web\+Server}}\index{Web\+Server@{Web\+Server}!S\+T\+O\+P\+P\+ED@{S\+T\+O\+P\+P\+ED}}}\mbox{\Hypertarget{classWebServer_a350f14f5d1522610502fb95f346e4a3ca8dd909a7ebd4b0b25ef0af0c754deb53}\label{classWebServer_a350f14f5d1522610502fb95f346e4a3ca8dd909a7ebd4b0b25ef0af0c754deb53}} 
+S\+T\+O\+P\+P\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+U\+N\+N\+I\+NG@{R\+U\+N\+N\+I\+NG}!Web\+Server@{Web\+Server}}\index{Web\+Server@{Web\+Server}!R\+U\+N\+N\+I\+NG@{R\+U\+N\+N\+I\+NG}}}\mbox{\Hypertarget{classWebServer_a350f14f5d1522610502fb95f346e4a3caf0cc930cb72ab6a5d0bca765bab81c19}\label{classWebServer_a350f14f5d1522610502fb95f346e4a3caf0cc930cb72ab6a5d0bca765bab81c19}} 
+R\+U\+N\+N\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+A\+R\+T\+I\+NG@{S\+T\+A\+R\+T\+I\+NG}!Web\+Server@{Web\+Server}}\index{Web\+Server@{Web\+Server}!S\+T\+A\+R\+T\+I\+NG@{S\+T\+A\+R\+T\+I\+NG}}}\mbox{\Hypertarget{classWebServer_a350f14f5d1522610502fb95f346e4a3ca229029746647a912e8c8f8366f2efacb}\label{classWebServer_a350f14f5d1522610502fb95f346e4a3ca229029746647a912e8c8f8366f2efacb}} 
+S\+T\+A\+R\+T\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+O\+P\+P\+I\+NG@{S\+T\+O\+P\+P\+I\+NG}!Web\+Server@{Web\+Server}}\index{Web\+Server@{Web\+Server}!S\+T\+O\+P\+P\+I\+NG@{S\+T\+O\+P\+P\+I\+NG}}}\mbox{\Hypertarget{classWebServer_a350f14f5d1522610502fb95f346e4a3ca46f07f457962a112a550b7b69a7dcdb8}\label{classWebServer_a350f14f5d1522610502fb95f346e4a3ca46f07f457962a112a550b7b69a7dcdb8}} 
+S\+T\+O\+P\+P\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+OR@{E\+R\+R\+OR}!Web\+Server@{Web\+Server}}\index{Web\+Server@{Web\+Server}!E\+R\+R\+OR@{E\+R\+R\+OR}}}\mbox{\Hypertarget{classWebServer_a350f14f5d1522610502fb95f346e4a3ca2187c4c7fce9bed9a2f66b8e835676e7}\label{classWebServer_a350f14f5d1522610502fb95f346e4a3ca2187c4c7fce9bed9a2f66b8e835676e7}} 
+E\+R\+R\+OR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWebServer_a456687b9d497b2810e3660f08bfa8462}\label{classWebServer_a456687b9d497b2810e3660f08bfa8462}} 
+\index{Web\+Server@{Web\+Server}!Web\+Server@{Web\+Server}}
+\index{Web\+Server@{Web\+Server}!Web\+Server@{Web\+Server}}
+\subsubsection{\texorpdfstring{Web\+Server()}{WebServer()}}
+{\footnotesize\ttfamily Web\+Server\+::\+Web\+Server (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{port = {\ttfamily 80} }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classWebServer}{Web\+Server}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Optional parameter to specify a non-\/standard port for the server \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classWebServer_a191564ab545bdb1aa90ed40cfa966836}\label{classWebServer_a191564ab545bdb1aa90ed40cfa966836}} 
+\index{Web\+Server@{Web\+Server}!Get\+Status@{Get\+Status}}
+\index{Get\+Status@{Get\+Status}!Web\+Server@{Web\+Server}}
+\subsubsection{\texorpdfstring{Get\+Status()}{GetStatus()}}
+{\footnotesize\ttfamily \hyperlink{classWebServer_a350f14f5d1522610502fb95f346e4a3c}{Status} Web\+Server\+::\+Get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get\+Status. 
+
+\begin{DoxyReturn}{Returns}
+A Status value which indicates the {\ttfamily \hyperlink{classWebServer}{Web\+Server}\textquotesingle{}s} current status. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWebServer_a0ce9a771f7adb84c47c748a9a19444fe}\label{classWebServer_a0ce9a771f7adb84c47c748a9a19444fe}} 
+\index{Web\+Server@{Web\+Server}!Start@{Start}}
+\index{Start@{Start}!Web\+Server@{Web\+Server}}
+\subsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily bool Web\+Server\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Start. 
+
+\begin{DoxyReturn}{Returns}
+True if the server was successfully started. Otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWebServer_af27f38bac6c5f718ae25deeb3369fb8a}\label{classWebServer_af27f38bac6c5f718ae25deeb3369fb8a}} 
+\index{Web\+Server@{Web\+Server}!Stop@{Stop}}
+\index{Stop@{Stop}!Web\+Server@{Web\+Server}}
+\subsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily bool Web\+Server\+::\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stop. 
+
+\begin{DoxyReturn}{Returns}
+True if the server was successfully stopped. Otherwise false. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classWebServer_acde07bc97f932a6690ab659625309562}\label{classWebServer_acde07bc97f932a6690ab659625309562}} 
+\index{Web\+Server@{Web\+Server}!\+\_\+status@{\+\_\+status}}
+\index{\+\_\+status@{\+\_\+status}!Web\+Server@{Web\+Server}}
+\subsubsection{\texorpdfstring{\+\_\+status}{\_status}}
+{\footnotesize\ttfamily \hyperlink{classWebServer_a350f14f5d1522610502fb95f346e4a3c}{Status} Web\+Server\+::\+\_\+status\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+G\+U\+I/\hyperlink{WebServer_8h}{Web\+Server.\+h}\item 
+G\+U\+I/\hyperlink{WebServer_8cpp}{Web\+Server.\+cpp}\end{DoxyCompactItemize}
