@@ -17,4 +17,6 @@ if(TARGET CivetWeb::Headers)
 endif()
 
 # MessageBrokerClient utility which encapsulates the SimpleAmqp library
-include(${CMAKE_SOURCE_DIR}/cmake/get_SimpleAmqp.cmake)
+# include(${CMAKE_SOURCE_DIR}/cmake/get_SimpleAmqp.cmake)
+
+# SensorIO utility which encapsulates the DHT11_IO library
