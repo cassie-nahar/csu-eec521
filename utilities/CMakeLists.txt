@@ -16,11 +16,10 @@ if(TARGET CivetWeb::Headers)
 	target_link_libraries(WebServer PUBLIC System)
 endif()
 
-# MessageBrokerClient utility which encapsulates the SimpleAmqp library
-# include(${CMAKE_SOURCE_DIR}/cmake/get_SimpleAmqp.cmake)
-
-# SensorIO utility which encapsulates the DHT11_IO library
-        make_target(STATIC_LIBRARY SensorIO)
-        target_compile_definitions(SensorIO PRIVATE DRESS_WWW_DIR="${CMAKE_CURRENT_SOURCE_DIR}/SensorIO/DHT11")
-        target_link_libraries(SensorIO PUBLIC System)
+# Database utility which encapsulates the MariaDb and MySQL libraries
+include(${CMAKE_SOURCE_DIR}/cmake/get_MariaDbCpp.cmake)
+if(TARGET MariaDbCpp::Library)
+	make_target(STATIC_LIBRARY Database)
+	target_link_libraries(Database PRIVATE MariaDbCpp::Library)
+endif()
 
