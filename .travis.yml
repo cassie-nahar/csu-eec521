@@ -1,8 +1,8 @@
 language: cpp
 script: 
-  - apt-get remove --purge mysql-server mysql-client mysql-common
-  - apt-get update
-  - apt-get install mariadb-server libssl-dev
+  - sudo apt-get remove --purge mysql-server mysql-client mysql-common
+  - sudo apt-get update
+  - sudo apt-get install mariadb-server libssl-dev
   - mkdir build
   - cd build
   - cmake .. -DBUILD_CIVETWEB=ON -DBUILD_MARIADBCPP=ON
