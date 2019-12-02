@@ -56,7 +56,8 @@ macro(make_target TARGET_TYPE TARGET_PATH)
 
 	if(CMAKE_COMPILER_IS_GNUCXX)
 		target_compile_options(${TARGET_NAME} PRIVATE -Wall -Wextra)
-		target_compile_features(${TARGET_NAME} PRIVATE cxx_std_11 c_std_11)
+		set_property(TARGET ${TARGET_NAME} PROPERTY C_STANDARD 11)
+		set_property(TARGET ${TARGET_NAME} PROPERTY CXX_STANDARD 17)
 	endif()
 
 	target_include_directories(${TARGET_NAME} PRIVATE ${CMAKE_SOURCE_DIR}) # location of the main CMakeLists.txt

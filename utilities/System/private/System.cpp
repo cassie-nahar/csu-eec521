@@ -15,4 +15,11 @@ namespace DRESS {
 		return is.str();
 	}
 
+	bool System::_value;
+
+	bool System::GetNewValue() {
+		_value = !_value;
+		return _value;
+	}
+
 }

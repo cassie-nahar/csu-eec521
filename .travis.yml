@@ -1,8 +1,10 @@
 language: cpp
-script: 
-  - sudo apt-get remove --purge mysql-server mysql-client mysql-common
+before_install:
+  - curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
   - sudo apt-get update
-  - sudo apt-get install mariadb-server libssl-dev
+  - sudo apt-get remove --purge mysql-server mysql-client libmysqlclient-dev
+  - sudo apt-get -y install mariadb-server libmariadb-dev libmariadbclient-dev libssl-dev
+script:
   - mkdir build
   - cd build
   - cmake .. -DBUILD_CIVETWEB=ON -DBUILD_MARIADBCPP=ON

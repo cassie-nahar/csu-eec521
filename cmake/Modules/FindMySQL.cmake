@@ -4,7 +4,7 @@ if(NOT TARGET MySQL::Headers)
     FIND_PATH(MySQL_INCLUDE_DIR
         NAMES mysql.h
 		PATHS ${CMAKE_INCLUDE_PATH} ${CMAKE_PREFIX_PATH}
-		PATH_SUFFIXES mysql
+		PATH_SUFFIXES mysql mariadb
     )
     if (NOT MySQL_INCLUDE_DIR STREQUAL "MySQL_INCLUDE_DIR-NOTFOUND")
         add_library(MySQL::Headers INTERFACE IMPORTED)
@@ -55,7 +55,7 @@ endif()
 
 if(NOT TARGET MySQL::Library)
     FIND_LIBRARY(MySQL_LIBRARY
-                 NAMES mysqlclient
+		         NAMES mysqlclient mariadbclient
                  PATHS ${CMAKE_PREFIX_PATH}
 				 PATH_SUFFIXES lib lib/mysql lib64 lib64/mysql lib/${CMAKE_LIBRARY_ARCHITECTURE} lib/${CMAKE_LIBRARY_ARCHITECTURE}/mysql
                 )
