@@ -15,6 +15,7 @@ if(TARGET WebServer)
 endif()
 
 make_target(EXECUTABLE RSM)
+target_link_libraries(RSM PRIVATE SensorIO)
 
 project(DRESS) # Just to restore the top-level project name.
 

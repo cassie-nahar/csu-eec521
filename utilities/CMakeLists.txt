@@ -20,3 +20,7 @@ endif()
 # include(${CMAKE_SOURCE_DIR}/cmake/get_SimpleAmqp.cmake)
 
 # SensorIO utility which encapsulates the DHT11_IO library
+        make_target(STATIC_LIBRARY SensorIO)
+        target_compile_definitions(SensorIO PRIVATE DRESS_WWW_DIR="${CMAKE_CURRENT_SOURCE_DIR}/SensorIO/DHT11")
+        target_link_libraries(SensorIO PUBLIC System)
+
