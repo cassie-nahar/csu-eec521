@@ -1,9 +1,11 @@
 language: cpp
 script: 
+  - apt-get remove --purge mysql-server mysql-client mysql-common
+  - apt-get update
   - apt-get install mariadb-server libssl-dev
-    mkdir build
-    cd build
-    cmake .. -DBUILD_CIVETWEB=ON -DBUILD_MARIADBCPP=ON
-    cmake --build . --target all --parallel $[`nproc`+1]
-    cmake ..
-    cmake --build . --target all --parallel $[`nproc`+1]
+  - mkdir build
+  - cd build
+  - cmake .. -DBUILD_CIVETWEB=ON -DBUILD_MARIADBCPP=ON
+  - cmake --build . --target all --parallel $[`nproc`+1]
+  - cmake ..
+  - cmake --build . --target all --parallel $[`nproc`+1]
