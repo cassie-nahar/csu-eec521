@@ -1,7 +1,7 @@
 include(${CMAKE_SOURCE_DIR}/cmake/get_dependency.cmake)
 
 if (BUILD_CIVETWEB)
-	message (STATUS "Building CivetWeb. NOTE: The Civet::Library target will not be available until you re-run CMake.")
+	message (STATUS "Building CivetWeb. NOTE: The CivetWeb::Library target will not be available until you re-run CMake.")
 	include(ExternalProject)
 
 	####### CivetWeb #######
@@ -28,7 +28,10 @@ if (BUILD_CIVETWEB)
 						 -DCMAKE_INSTALL_PREFIX=${DRESS_DEPS_PATH}/CivetWeb
 	)
 else()
-	find_package(CivetWeb REQUIRED)
+	find_package(CivetWeb)
+	if (NOT CivetWeb_FOUND)
+		message(FATAL_ERROR "Could not find CivetWeb installation. Try running with -DBUILD_CIVETWEB=ON")
+	endif()
 endif()
 
 unset(BUILD_CIVETWEB CACHE)
