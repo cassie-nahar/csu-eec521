@@ -22,8 +22,23 @@ namespace DRESS {
 
 		virtual ~WebServer() = default;
 
+		/*!
+		 * \brief RegisterGetFileHandler
+		 * \param URI
+		 * \param FilePath
+		 */
 		virtual void RegisterGetFileHandler(std::string URI, std::string FilePath) = 0;
+
+		/*!
+		 * \brief RegisterGetJsonHandler
+		 * \param URI
+		 */
 		virtual void RegisterGetJsonHandler(std::string URI, std::string(*GetJsonObject)()) = 0;
+
+		/*!
+		 * \brief RegisterPostJsonHandler
+		 * \param URI
+		 */
 		virtual void RegisterPostJsonHandler(std::string URI, void(*PostJsonObject)(const std::string & JsonObject)) = 0;
 
 	};
