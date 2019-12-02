@@ -2,6 +2,7 @@
 #include <iostream>
 #include <sstream>
 #include <utilities/System/System.h>
+#include <utilities/Database/Database.h>
 #include <utilities/WebServer/WebServer.h>
 
 int main()
@@ -9,12 +10,19 @@ int main()
 	auto server = DRESS::WebServer::CreateWebServer(8081);
 
 	server->RegisterGetFileHandler("/index", "/index.html");
+
 	server->RegisterGetJsonHandler("/status", []() -> std::string {
-							   std::ostringstream out;
-							   out << "{ \"timestamp\":\"" << DRESS::System::GetCurrentTimeString().c_str() << "\", "
-								   << "\"state\":\"" << (DRESS::System::GetNewValue() ? "ON" : "OFF") << "\" }";
-							   return out.str();
-						   });
+									   std::ostringstream out;
+									   out << "{ \"timestamp\":\"" << DRESS::System::GetCurrentTimeString().c_str() << "\", "
+									   << "\"state\":\"" << (DRESS::System::GetNewValue() ? "ON" : "OFF") << "\" }";
+									   return out.str();
+								   });
+
+	server->RegisterGetJsonHandler("/db", []() -> std::string {
+									   auto db = DRESS::Database::Create();
+									   return db->Get("SELECT * FROM DHT11");
+								   });
+
 	server->RegisterPostJsonHandler("/command", [](const std::string & JsonObject) {
 		std::cout << "received: " << JsonObject << std::endl;
 

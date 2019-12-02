@@ -9,7 +9,9 @@ namespace DRESS {
 
 	CivetWebServer::CivetWebServer(int Port, std::string DocumentRoot) : _Server({
 													   "document_root", DocumentRoot,
-													   "listening_ports", std::to_string(Port) }) {}
+													   "listening_ports", std::to_string(Port) }) {
+		std::cout << "Running on http://localhost:" << Port << std::endl << std::flush;
+	}
 
 	void CivetWebServer::RegisterGetFileHandler(std::string URI, std::string FilePath) {
 		_Server.addHandler(URI, new GetFileHandler(FilePath)); // TODO: Fix this memory leak
