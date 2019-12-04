@@ -1,7 +1,0 @@
-<map id="deps/MariaDbCpp/include/mariadb++/account.hpp" name="deps/MariaDbCpp/include/mariadb++/account.hpp">
-<area shape="rect" id="node2" href="$concurrency_8hpp.html" title="deps/MariaDbCpp/include\l/mariadb++/concurrency.hpp" alt="" coords="5,95,215,136"/>
-<area shape="rect" id="node3" href="$connection_8hpp.html" title="deps/MariaDbCpp/include\l/mariadb++/connection.hpp" alt="" coords="239,95,442,136"/>
-<area shape="rect" id="node4" href="$MariaDatabase_8h.html" title="utilities/Database\l/private/MariaDatabase.h" alt="" coords="319,184,501,225"/>
-<area shape="rect" id="node5" href="$Database_8cpp.html" title="utilities/Database\l/private/Database.cpp" alt="" coords="226,273,389,315"/>
-<area shape="rect" id="node6" href="$MariaDatabase_8cpp.html" title="utilities/Database\l/private/MariaDatabase.cpp" alt="" coords="413,273,612,315"/>
-</map>
