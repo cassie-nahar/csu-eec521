@@ -18,7 +18,7 @@ script:
   - cmake ..
   - cmake --build . --target all --parallel $[`nproc`+1]
 before_deploy:
-  - https://downloads.sourceforge.net/project/plantuml/plantuml.jar
+  - wget https://downloads.sourceforge.net/project/plantuml/plantuml.jar
   - sudo apt-get -y install doxygen graphviz
   - doxygen ../Doxyfile
 deploy:
