@@ -2,8 +2,9 @@ language: cpp
 os: linux
 before_install:
   - curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
-  - sudo apt-get update
   - sudo apt-get remove --purge mysql-server mysql-client libmysqlclient-dev
+install:
+  - sudo apt-get update
   - sudo apt-get -y install mariadb-server libmariadb-dev libmariadbclient-dev libssl-dev
 script:
   - mkdir build
