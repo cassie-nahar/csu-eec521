@@ -1,19 +1,16 @@
-"""@package RSM.py
-This module is the python script pulling data from the DHT and sending to SQL server.
-
-usage: RSM.py <device_name> <SQL_ip_address>
-
-where device name is the string identifier for this RSM (defaults to mac ID if not provided)
-where SQL_ip_address is the IP of a SQL server to receive the atmospheric data (defaults to localhost if not provided)
- 
-Module Dependencies:
-MySQLdb
-Adafruit_DHT
-numpy
-
-Hardcoded for the DHT11 input on pin GPIO4
-"""
-
+## @package RSM.py
+#  This module is the python script pulling data from the DHT and sending to SQL server.
+#
+#  usage: RSM.py <device_name> <SQL_ip_address>
+#
+#  where device name is the string identifier for this RSM (defaults to mac ID if not provided)
+#  where SQL_ip_address is the IP of a SQL server to receive the atmospheric data (defaults to localhost if not provided)
+#
+#  Module Dependencies:
+#  MySQLdb (sudo apt-get install mysql-server python-mysqldb)
+#  Adafruit_DHT (python -m pip install --user Adafruit_DHT)
+#
+#  Hardcoded for the DHT11 input on pin GPIO4
 
 #!/usr/bin/python
 import sys
@@ -22,7 +19,6 @@ import uuid
 import Adafruit_DHT # https://github.com/adafruit/Adafruit_Python_DHT.git
 from datetime import datetime, timedelta
 from time import sleep
-from numpy import mean
 
 # HANDLE COMMAND LINE ARGS (IF ANY) 
 # usage: 1st command line argument is the hostname, defaults to MACID
@@ -48,7 +44,6 @@ else:
 
 print 'Creating connection to SQL database on ', conn_IP, ' as device name ', sens_name, '\n'
 
-SENSOR_NUMBER = "sens_name" # Name of the rasperry pi in question
 record_frequency = timedelta(0,30,0) # 30 seconds
 # db = MySQLdb.connect("192.168.43.126", "monitor", "monitor", "DRESS_ATMOSPHERIC")
 # db = MySQLdb.connect("10.182.128.3", "monitor", "monitor", "DRESS_ATMOSPHERIC")
@@ -78,10 +73,10 @@ while True:
     continue # don't save to DB unless we have enough samples of data to average
 
   try:
-    record_temperature = mean(temperature_series)
-    record_humidity = mean(humidity_series)
+    record_temperature = sum(temperature_series) / len(temperature_series)
+    record_humidity = sum(humidity_series) / len(humidity_series)
     sql = "INSERT INTO DHT11 (datetime, sensor_number, temperature, humidity) VALUES(NOW(), %s, %s, %s)"
-    val = (SENSOR_NUMBER, record_temperature, record_humidity)
+    val = (sens_name, record_temperature, record_humidity)
     dbCursor.execute(sql, val)
     db.commit()
 

@@ -2,7 +2,6 @@
 #include <iostream> // std::cout
 #include <unistd.h> // std::sleep
 
-#include <utilities/System/System.h>
 #include <utilities/WebServer/private/CivetWebServer.h>
 
 namespace DRESS {
@@ -36,7 +35,7 @@ namespace DRESS {
 		mg_printf(conn,
 				  "HTTP/1.1 200 OK\r\n"
 				  "Cache: no-cache\r\n"
-				  "Content-Type: application/x-javascript\r\n"
+				  "Content-Type: application/json\r\n"
 				  "\r\n"
 				  "%s", _GetJsonObject().c_str());
 		return true;

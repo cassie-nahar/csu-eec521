@@ -3,74 +3,105 @@
     <head>
 	    <meta charset="UTF-8">
 		<title>APC GUI Demo</title>
-		<script src="https://www.gstatic.com/charts/loader.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 				crossorigin="anonymous"></script>
+		<script type="text/javascript">
+		    // "unique" function from https://stackoverflow.com/a/14438954/4875896
+			function unique(value, index, self) {
+			    return self.indexOf(value) === index;
+			}
+			window.onload = function () {
+			    function drawCanvas() {
+				    $.getJSON("db", function(newData) {
+					    var sensor_numbers = newData.result.map(result => result.sensor_number).filter(unique);
+						var temperature_data_entries = [];
+						var humidity_data_entries = [];
+						sensor_numbers.forEach(sensor_number => {
+						    var sensor_readings = newData.result.filter(result => result.sensor_number == sensor_number);
+							var temperature_sensor_data_points = [];
+							sensor_readings.forEach(sensor_reading => {
+							    temperature_sensor_data_points.push({ x: new Date(Date.parse(sensor_reading.datetime)), y: parseFloat(sensor_reading.temperature) });
+							});
+							temperature_data_entries.push({
+							    type: "line",
+								showInLegend: true,
+								name: sensor_number,
+								legendText: sensor_number,
+								dataPoints: temperature_sensor_data_points
+							});
+							var humidity_sensor_data_points = [];
+							sensor_readings.forEach(sensor_reading => {
+							    humidity_sensor_data_points.push({ x: new Date(Date.parse(sensor_reading.datetime)), y: parseFloat(sensor_reading.humidity) });
+							});
+							humidity_data_entries.push({
+							    type: "line",
+								showInLegend: true,
+								name: sensor_number,
+								legendText: sensor_number,
+								dataPoints: humidity_sensor_data_points
+							});
+						});
+
+                        var temperature_chart = new CanvasJS.Chart("temperature_chart_container", {
+                            title:{
+                                text: "Temperature"
+                            },
+                            axisX:{
+                                title: "Time",
+                                valueFormatString: "hh:mm:ss TT",
+                                labelAngle: -60,
+                                interval:2,
+                                intervalType: "minute",
+                                gridThickness: 2
+                            },
+                            axisY: {
+                                title: "Temperature (°C)",
+                                valueFormatString: "0.0#"
+                            },
+                            legend: {
+                                verticalAlign: "top"
+                            },
+                            data: temperature_data_entries
+                        });
+                        temperature_chart.render();
+
+                        var humidity_chart = new CanvasJS.Chart("humidity_chart_container", {
+                            title:{
+                                text: "Humidity"
+                            },
+                            axisX:{
+                                title: "Time",
+                                valueFormatString: "hh:mm:ss TT",
+                                labelAngle: -60,
+                                interval:2,
+                                intervalType: "minute",
+                                gridThickness: 2
+                            },
+                            axisY: {
+                                title: "Humidity",
+                                valueFormatString: "0.0#"
+                            },
+                            legend: {
+                                verticalAlign: "top"
+                            },
+                            data: humidity_data_entries
+                        });
+                        humidity_chart.render();
+                    });
+                };
+                window.setInterval(drawCanvas, 5000);
+                drawCanvas();
+            }
+        </script>
 	</head>
 	<body>
 	    <div id="wrap">
-		    <div id="temperature_chart_div" style="height:500px;"></div>
+		    <div id="temperature_chart_container" style="height: 500px; width: 100%;"></div>
 		</div>
 		<div id="wrap">
-		    <div id="humidity_chart_div" style="height:500px;"></div>
+		    <div id="humidity_chart_container" style="height: 500px; width: 100%;"></div>
 		</div>
-
-        <script type="text/javascript">
-		    google.charts.load('current', {packages: ['corechart', 'line']});
-			google.charts.setOnLoadCallback(drawBasic);
-			var newData;
-			function drawBasic() {
-			    $.get("db", "", function(newData) {
-				    var tempData = new google.visualization.DataTable();
-					tempData.addColumn('string', 'X');
-					tempData.addColumn('number', 'Temperature (°C)');
-					var humidityData = new google.visualization.DataTable();
-					humidityData.addColumn('string', 'X');
-					humidityData.addColumn('number', 'Humidity');
-					var result = JSON.parse(newData).result;
-					result.forEach(element => {
-					    tempData.addRow([element.datetime,parseFloat(element.temperature)]);
-						humidityData.addRow([element.datetime,parseFloat(element.humidity)]);
-					});
-
-                    var tempOptions = {
-					    chartArea: {
-						    top: 20,
-							height: '75%'
-						},
-						legend: {position: 'top'},
-						hAxis: {
-						    title: 'Time'
-						},
-						vAxis: {
-						    title: 'Temperature (°C)'
-						}
-					};
-
-                    var humidityOptions = {
-					    chartArea: {
-						    top: 20,
-							height: '75%'
-						},
-						legend: {position: 'top'},
-						hAxis: {
-						    title: 'Time'
-						},
-						vAxis: {
-						    title: 'Humidity'
-						}
-					};
-
-                    var tempChart = new google.visualization.LineChart(document.getElementById('temperature_chart_div'));
-					tempChart.draw(tempData, tempOptions);
-
-                    var humidityChart = new google.visualization.LineChart(document.getElementById('humidity_chart_div'));
-					humidityChart.draw(tempData, humidityOptions);
-				});
-			};
-
-            window.setInterval(drawBasic, 5000);
-		</script>
 	</body>
 </html>

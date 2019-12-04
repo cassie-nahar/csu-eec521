@@ -1,7 +1,7 @@
 #include <unistd.h> // std::sleep
 #include <iostream>
 #include <sstream>
-#include <utilities/System/System.h>
+
 #include <utilities/Database/Database.h>
 #include <utilities/WebServer/WebServer.h>
 
@@ -11,36 +11,13 @@ int main()
 
 	server->RegisterGetFileHandler("/index", "/index.html");
 
-	server->RegisterGetJsonHandler("/status", []() -> std::string {
-									   std::ostringstream out;
-									   out << "{ \"timestamp\":\"" << DRESS::System::GetCurrentTimeString().c_str() << "\", "
-									   << "\"state\":\"" << (DRESS::System::GetNewValue() ? "ON" : "OFF") << "\" }";
-									   return out.str();
-								   });
-
 	server->RegisterGetJsonHandler("/db", []() -> std::string {
-									   auto db = DRESS::Database::Create();
-									   return db->Get("SELECT * FROM DHT11");
+									   auto db = DRESS::Database::Create("DRESS_ATMOSPHERIC", "10.254.254.100");
+									   return db->Get("SELECT sensor_number, datetime, temperature, humidity FROM DHT11 WHERE DATE(datetime) = CURDATE() AND TIME(datetime) > DATE_SUB(CURTIME(), INTERVAL 30 MINUTE) ORDER BY datetime ASC");
 								   });
-
-	server->RegisterPostJsonHandler("/command", [](const std::string & JsonObject) {
-		std::cout << "received: " << JsonObject << std::endl;
-
-		std::string strBuf = JsonObject;
-		strBuf = strBuf.substr(strBuf.find("=") + 1);
-		//	bool cmd_state;
-		if(strBuf == "ON") {
-			//		cmd_state = true;
-			std::cout << "Sending ON command" << std::endl;
-		}
-		else {
-			//		cmd_state = false;
-			std::cout << "Sending OFF command" << std::endl;
-		}
-	});
 
 	while(true) {
-		// TODO: Use boost/signal2 to bind a signal emitted from DRESS::CivetWebServer's handler to break out of this loop
+		// TODO: Use boost/signal2 or similar to bind a signal emitted from DRESS::WebServer's handler to break out of this loop
 		sleep(1);
 	}
 
