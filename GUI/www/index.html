@@ -8,11 +8,13 @@
 		        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 				crossorigin="anonymous"></script>
 		<script type="text/javascript">
-		    // "unique" function from https://stackoverflow.com/a/14438954/4875896
+		    // "unique" from https://stackoverflow.com/a/14438954/4875896
 			function unique(value, index, self) {
 			    return self.indexOf(value) === index;
 			}
 			window.onload = function () {
+			    var search_params = new URLSearchParams(location.search);
+				var is_f = search_params.has('unit') && search_params.get('unit') == 'f';
 			    function drawCanvas() {
 				    $.getJSON("db", function(newData) {
 					    var sensor_numbers = newData.result.map(result => result.sensor_number).filter(unique).sort();
@@ -22,7 +24,11 @@
 						    var sensor_readings = newData.result.filter(result => result.sensor_number == sensor_number);
 							var temperature_sensor_data_points = [];
 							sensor_readings.forEach(sensor_reading => {
-							    temperature_sensor_data_points.push({ x: new Date(Date.parse(sensor_reading.datetime)), y: parseFloat(sensor_reading.temperature) });
+							    var temp_c = parseFloat(sensor_reading.temperature);
+								temperature_sensor_data_points.push({ x: new Date(Date.parse(sensor_reading.datetime)),
+								                                      y: is_f
+																	      ? (temp_c * 9/5) + 32
+																		  : temp_c });
 							});
 							temperature_data_entries.push({
 							    type: "line",
@@ -57,7 +63,7 @@
                                 gridThickness: 2
                             },
                             axisY: {
-                                title: "Temperature (°C)",
+                                title: "Temperature (°" + (is_f ? "F" : "C") + ")",
                                 valueFormatString: "0.0#",
                                 includeZero: false
                             },
@@ -81,7 +87,7 @@
                                 gridThickness: 2
                             },
                             axisY: {
-                                title: "Humidity",
+                                title: "Humidity (% RH)",
                                 valueFormatString: "0.0#",
                                 includeZero: false
                             },
