@@ -13,14 +13,14 @@ script:
   - cmake --build . --target all --parallel $[`nproc`+1]
   - cmake ..
   - cmake --build . --target all --parallel $[`nproc`+1]
-after_success:
+before_deploy:
   - sudo apt-get -y install doxygen
   - doxygen ../Doxyfile
 deploy:
   provider: pages
-  cleanup: false
+  skip_cleanup: true
   keep_history: true
-  local_dir: ../docs/html
+  local_dir: $TRAVIS_BUILD_DIR/docs/html
   token: $GH_REPO_TOKEN
   on:
     branch: master
