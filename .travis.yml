@@ -1,6 +1,7 @@
 # File:        DRESS/.travis.yml
 # Authors:     Kevin Rak
 # Description: This file defines the instructions for Travis CI
+#              This file can be analyzed online at https://config.travis-ci.com/explore
 
 language: cpp
 os: linux
@@ -18,6 +19,7 @@ script:
   - cmake ..
   - cmake --build . --target all --parallel $[`nproc`+1]
 before_deploy:
+  - cd $TRAVIS_BUILD_DIR
   - wget https://downloads.sourceforge.net/project/plantuml/plantuml.jar
   - sudo apt-get -y install doxygen graphviz
   - doxygen ../Doxyfile
