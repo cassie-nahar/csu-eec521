@@ -8,11 +8,10 @@ include(${CMAKE_SOURCE_DIR}/cmake/make_target.cmake)
 # NOTE: any external dependencies should be fully encapsulated in targets within the utilities directory
 add_subdirectory(${CMAKE_SOURCE_DIR}/utilities)
 
-# If we do not have the System or WebServer or Database utility libraries, then we cannot build the GUI
-if(TARGET System AND TARGET WebServer AND TARGET Database)
+# If we do not have the WebServer or Database utility libraries, then we cannot build the GUI
+if(TARGET WebServer AND TARGET Database)
 	make_target(EXECUTABLE GUI)
 	target_compile_definitions(GUI PRIVATE DRESS_WWW_DIR="${CMAKE_CURRENT_SOURCE_DIR}/GUI/www")
-	target_link_libraries(GUI PRIVATE System)
 	target_link_libraries(GUI PRIVATE WebServer)
 	target_link_libraries(GUI PRIVATE Database)
 endif()
