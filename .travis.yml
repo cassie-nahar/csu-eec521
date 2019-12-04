@@ -1,4 +1,5 @@
 language: cpp
+os: linux
 before_install:
   - curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
   - sudo apt-get update
@@ -18,12 +19,13 @@ addons:
   apt:
     packages:
       - doxygen
+script:
   - doxygen ../Doxyfile
 deploy:
   provider: pages
-  skip_cleanup: true
+  cleanup: false
   keep_history: true
   local_dir: ../docs/html
-  github_token: $GH_REPO_TOKEN
+  token: $GH_REPO_TOKEN
   on:
     branch: master
