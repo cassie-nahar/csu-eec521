@@ -4,15 +4,11 @@ project(DRESS_UTILITIES)
 # Simplify target creation
 include(${CMAKE_SOURCE_DIR}/cmake/make_target.cmake)
 
-# System utilities such as getting the system clock time or reading directories
-make_target(STATIC_LIBRARY System)
-
 # WebServer utility which encapsulates the CivetWeb library
 include(${CMAKE_SOURCE_DIR}/cmake/get_CivetWeb.cmake)
 if(TARGET CivetWeb::Headers)
 	make_target(STATIC_LIBRARY WebServer)
 	target_link_libraries(WebServer PRIVATE CivetWeb::Library-CPP)
-	target_link_libraries(WebServer PUBLIC System)
 endif()
 
 # Database utility which encapsulates the MariaDb and MySQL libraries

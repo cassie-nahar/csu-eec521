@@ -18,12 +18,12 @@ addons:
   apt:
     packages:
 	  - doxygen
-  - doxygen Doxyfile
+  - doxygen ../Doxyfile
 deploy:
   provider: pages
   skip_cleanup: true
   keep_history: true
-  local_dir: docs/html
+  local_dir: ../docs/html
   github_token: $GH_REPO_TOKEN
   on:
     branch: master

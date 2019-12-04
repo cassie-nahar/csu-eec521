@@ -81,7 +81,8 @@ macro(make_target TARGET_TYPE TARGET_PATH)
 	file(GLOB_RECURSE CSS_FILES ${TARGET_PATH}/*.css)
 	file(GLOB_RECURSE JS_FILES ${TARGET_PATH}/*.js)
 	file(GLOB_RECURSE PNG_FILES ${TARGET_PATH}/*.png)
-	target_sources(${TARGET_NAME} PRIVATE ${HTML_FILES} ${CSS_FILES} ${JS_FILES} ${PNG_FILES})
+	file(GLOB_RECURSE ICO_FILES ${TARGET_PATH}/*.ico)
+	target_sources(${TARGET_NAME} PRIVATE ${HTML_FILES} ${CSS_FILES} ${JS_FILES} ${PNG_FILES} ${ICO_FILES})
 
 	if(CMAKE_CROSSCOMPILING)
 		# Since all of our dependencies are compiled with the same ABI, we don't need to see all of these warnings.
