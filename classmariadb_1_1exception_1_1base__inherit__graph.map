@@ -1,0 +1,5 @@
+<map id="mariadb::exception::base" name="mariadb::exception::base">
+<area shape="rect" id="node3" href="$classmariadb_1_1exception_1_1connection.html" title="mariadb::exception\l::connection" alt="" coords="359,5,504,47"/>
+<area shape="rect" id="node4" href="$classmariadb_1_1exception_1_1date__time.html" title="mariadb::exception\l::date_time" alt="" coords="359,71,504,112"/>
+<area shape="rect" id="node5" href="$classmariadb_1_1exception_1_1time.html" title="mariadb::exception\l::time" alt="" coords="359,136,504,177"/>
+</map>
