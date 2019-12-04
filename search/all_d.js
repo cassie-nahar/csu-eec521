@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['val',['val',['../namespacedht__temp.html#a97dfaac4c4e900684cbda4e2e16bb8d4',1,'dht_temp.val()'],['../namespaceRSM.html#af53f06ac152d0054fab1dfdc25efc6f8',1,'RSM.val()']]]
+  ['_7edatabase',['~Database',['../classDRESS_1_1Database.html#a881dd4522a2663072f0f1e8b28b7ebf8',1,'DRESS::Database']]],
+  ['_7ewebserver',['~WebServer',['../classDRESS_1_1WebServer.html#af9a8486e07d6928346139501f155d4ef',1,'DRESS::WebServer']]]
 ];

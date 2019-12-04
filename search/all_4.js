@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['get',['Get',['../classDRESS_1_1Database.html#a43321823433d23f4344c5aa227bb990a',1,'DRESS::Database::Get()'],['../classDRESS_1_1MariaDatabase.html#a3012ba350b14a9628b296527f720c91d',1,'DRESS::MariaDatabase::Get()']]],
-  ['get_5fatmospheric_2ephp',['get_atmospheric.php',['../get__atmospheric_8php.html',1,'']]],
-  ['getfilehandler',['GetFileHandler',['../classDRESS_1_1GetFileHandler.html#ad8bc02880ee0fc823ac699c36e156333',1,'DRESS::GetFileHandler']]],
-  ['getfilehandler',['GetFileHandler',['../classDRESS_1_1GetFileHandler.html',1,'DRESS']]],
-  ['getjsonhandler',['GetJsonHandler',['../classDRESS_1_1GetJsonHandler.html',1,'DRESS']]],
-  ['getjsonhandler',['GetJsonHandler',['../classDRESS_1_1GetJsonHandler.html#a65d45500eb602d453ff53dccfd88f416',1,'DRESS::GetJsonHandler']]]
+  ['handleget',['handleGet',['../classDRESS_1_1GetFileHandler.html#a5810a9ae49ab7c2952005aeaf906f9d1',1,'DRESS::GetFileHandler::handleGet()'],['../classDRESS_1_1GetJsonHandler.html#a8e1702ac9674206ede895ae9c906a55b',1,'DRESS::GetJsonHandler::handleGet()']]],
+  ['handlepost',['handlePost',['../classDRESS_1_1PostJsonHandler.html#a312fe874078298b902dcef8e697eecfc',1,'DRESS::PostJsonHandler']]],
+  ['handlerptr_5ft',['HandlerPtr_t',['../classDRESS_1_1CivetWebServer.html#a20906c9ae5417a392d19904b121ed637',1,'DRESS::CivetWebServer']]],
+  ['humidity',['humidity',['../namespaceRSM.html#a4885de852e530e0a081d8be9e71a0b2f',1,'RSM']]],
+  ['humidity_5fseries',['humidity_series',['../namespaceRSM.html#a4374ffb38b80f919c0db9706b19b439a',1,'RSM']]]
 ];

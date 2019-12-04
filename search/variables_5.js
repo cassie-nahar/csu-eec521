@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['next',['next',['../namespacedht__example.html#ac81a7b0e7696811864f5c6f3d6c17529',1,'dht_example']]],
-  ['next_5frecord',['next_record',['../namespacedht__temp.html#a064ad89fe3b2579f3885b0ff7f21c0b2',1,'dht_temp.next_record()'],['../namespaceRSM.html#a2886445a85a5325190d31f375b1ccee2',1,'RSM.next_record()']]],
-  ['now',['now',['../namespacedht__example.html#a4c34c151f20c7e4368a61abefb89c55e',1,'dht_example']]]
+  ['record_5ffrequency',['record_frequency',['../namespaceRSM.html#a69adbf78756cc81ba851cca8a041b467',1,'RSM']]],
+  ['record_5fhumidity',['record_humidity',['../namespaceRSM.html#a9634727ed02367ef0e292ea5549f41c5',1,'RSM']]],
+  ['record_5ftemperature',['record_temperature',['../namespaceRSM.html#a3832496ba770c2b4e7d6ff3c146db937',1,'RSM']]]
 ];
