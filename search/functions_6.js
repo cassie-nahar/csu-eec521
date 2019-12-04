@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['get',['Get',['../classDRESS_1_1Database.html#a43321823433d23f4344c5aa227bb990a',1,'DRESS::Database::Get()'],['../classDRESS_1_1MariaDatabase.html#a3012ba350b14a9628b296527f720c91d',1,'DRESS::MariaDatabase::Get()'],['../classmariadb_1_1data.html#aec9a51707f851d53d7c43e2d601b72c4',1,'mariadb::data::get()']]],
-  ['get_5fexecute_5fresult',['get_execute_result',['../namespacemariadb_1_1concurrency.html#a98d3ec1244ba5072b0c07b882d4272f0',1,'mariadb::concurrency']]],
-  ['get_5finsert_5fresult',['get_insert_result',['../namespacemariadb_1_1concurrency.html#a3e1566fa759f945b6c06cae60b91e222',1,'mariadb::concurrency']]],
-  ['get_5fquery_5fresult',['get_query_result',['../namespacemariadb_1_1concurrency.html#a800ef1ce62955afa38bfd1f968c240f8',1,'mariadb::concurrency']]],
-  ['getfilehandler',['GetFileHandler',['../classDRESS_1_1GetFileHandler.html#ad8bc02880ee0fc823ac699c36e156333',1,'DRESS::GetFileHandler']]],
-  ['getjsonhandler',['GetJsonHandler',['../classDRESS_1_1GetJsonHandler.html#a65d45500eb602d453ff53dccfd88f416',1,'DRESS::GetJsonHandler']]]
+  ['read_5fdht11_5fdat',['read_dht11_dat',['../dht__example_8c.html#ab5d379de3b2ab8eecd568815c3d48daa',1,'dht_example.c']]],
+  ['registergetfilehandler',['RegisterGetFileHandler',['../classDRESS_1_1CivetWebServer.html#a5da4f0af7657987924587a782ff6146e',1,'DRESS::CivetWebServer::RegisterGetFileHandler()'],['../classDRESS_1_1WebServer.html#add119af8c036a7703c0f61e42e527c42',1,'DRESS::WebServer::RegisterGetFileHandler()']]],
+  ['registergetjsonhandler',['RegisterGetJsonHandler',['../classDRESS_1_1CivetWebServer.html#a83efbd4b256204548044e2518b87c147',1,'DRESS::CivetWebServer::RegisterGetJsonHandler()'],['../classDRESS_1_1WebServer.html#a66ad84a4dd8056e45151e53aa8113c22',1,'DRESS::WebServer::RegisterGetJsonHandler()']]],
+  ['registerpostjsonhandler',['RegisterPostJsonHandler',['../classDRESS_1_1CivetWebServer.html#af29b56860485b4818ea039dc06ee689b',1,'DRESS::CivetWebServer::RegisterPostJsonHandler()'],['../classDRESS_1_1WebServer.html#af35e1ec1bfff9348e261d4850345d52e',1,'DRESS::WebServer::RegisterPostJsonHandler()']]]
 ];

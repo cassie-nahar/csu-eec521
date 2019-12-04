@@ -1,17 +1,7 @@
 var searchData=
 [
-  ['handle',['handle',['../namespacemariadb.html#a76071dadc44a85af186e12ae0856fb3c',1,'mariadb']]],
-  ['handleget',['handleGet',['../classDRESS_1_1GetFileHandler.html#a5810a9ae49ab7c2952005aeaf906f9d1',1,'DRESS::GetFileHandler::handleGet()'],['../classDRESS_1_1GetJsonHandler.html#a8e1702ac9674206ede895ae9c906a55b',1,'DRESS::GetJsonHandler::handleGet()']]],
-  ['handlepost',['handlePost',['../classDRESS_1_1PostJsonHandler.html#a312fe874078298b902dcef8e697eecfc',1,'DRESS::PostJsonHandler']]],
-  ['handlerptr_5ft',['HandlerPtr_t',['../classDRESS_1_1CivetWebServer.html#a20906c9ae5417a392d19904b121ed637',1,'DRESS::CivetWebServer']]],
-  ['host',['host',['../structmg__client__options.html#aeaa7ef9674ac7115eff7ca61568c622c',1,'mg_client_options']]],
-  ['host_5fname',['host_name',['../structmg__client__options.html#a60814eb7b7f46cb2a619d59d719a01b1',1,'mg_client_options::host_name()'],['../classmariadb_1_1account.html#ac810e8ee27fd050006770e3aa7151c93',1,'mariadb::account::host_name()']]],
-  ['hour',['hour',['../classmariadb_1_1time.html#a96350fee5e77b17fc3e0ed94ada3eeb4',1,'mariadb::time::hour() const '],['../classmariadb_1_1time.html#af33d26e2e5e00cc6ea35afa1875a38b8',1,'mariadb::time::hour(u8 hour)']]],
-  ['hours',['hours',['../classmariadb_1_1time__span.html#a62e0cb83bf39f2270deac035c7f3276f',1,'mariadb::time_span::hours() const '],['../classmariadb_1_1time__span.html#a467a3901cdc53885d22f853fd571b873',1,'mariadb::time_span::hours(u8 hour)']]],
-  ['http_5ferror',['http_error',['../structmg__callbacks.html#a7ea680aa175209187bd1939fcfce5ade',1,'mg_callbacks']]],
-  ['http_5fheaders',['http_headers',['../structmg__request__info.html#a2337d14061022518280f4e647c72a20b',1,'mg_request_info::http_headers()'],['../structmg__response__info.html#af6cc6e0a5264c89cfd54e84461a462c8',1,'mg_response_info::http_headers()']]],
-  ['http_5fversion',['http_version',['../structmg__request__info.html#ac9743ffd7a96d700813777ff3d3bc25d',1,'mg_request_info::http_version()'],['../structmg__response__info.html#a28b0b6daf9b7245b7cefc22b65f377d4',1,'mg_response_info::http_version()']]],
-  ['humi',['humi',['../namespacedht__example.html#aa29a1963165e7dd96f5df445ec766d05',1,'dht_example']]],
-  ['humidity',['humidity',['../namespacedht__example.html#a6a4209a3087dfc1383829ca5e93baaf5',1,'dht_example.humidity()'],['../namespacedht__temp.html#acb8397013c741f30fc13f3a1996a3b26',1,'dht_temp.humidity()'],['../namespaceRSM.html#a4885de852e530e0a081d8be9e71a0b2f',1,'RSM.humidity()']]],
-  ['humidity_5fseries',['humidity_series',['../namespacedht__temp.html#ae20062f347c7476267f59029269fe4e8',1,'dht_temp.humidity_series()'],['../namespaceRSM.html#a4374ffb38b80f919c0db9706b19b439a',1,'RSM.humidity_series()']]]
+  ['postjsonhandler',['PostJsonHandler',['../classDRESS_1_1PostJsonHandler.html',1,'DRESS']]],
+  ['postjsonhandler',['PostJsonHandler',['../classDRESS_1_1PostJsonHandler.html#ae23c044e41474327d7da1d84d6cab24e',1,'DRESS::PostJsonHandler']]],
+  ['ptr_5ft',['ptr_t',['../classDRESS_1_1Database.html#a86202fe65021c131ff4f18d496b0878a',1,'DRESS::Database::ptr_t()'],['../classDRESS_1_1WebServer.html#a593b7147205d9fed01d0eed6633c53de',1,'DRESS::WebServer::ptr_t()']]],
+  ['put',['Put',['../classDRESS_1_1Database.html#a5b0a0ce0aaf5aac082f76d34e73cdf6b',1,'DRESS::Database::Put()'],['../classDRESS_1_1MariaDatabase.html#a20c7eb019df481e0f28adbfda867f782',1,'DRESS::MariaDatabase::Put()']]]
 ];

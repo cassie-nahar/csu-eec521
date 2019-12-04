@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['client_5fcert',['client_cert',['../structmg__request__info.html#a73782f8b56d710c02381d000d4ac1c6a',1,'mg_request_info::client_cert()'],['../structmg__client__options.html#a76d71606ba3eaba0583fddc2152b8f93',1,'mg_client_options::client_cert()']]],
-  ['conn_5fdata',['conn_data',['../structmg__request__info.html#aad3d4e3de727f7424ff7526ed085716e',1,'mg_request_info']]],
-  ['conn_5fip',['conn_IP',['../namespaceRSM.html#a8ed875e81d6f66566a5e37013cf86858',1,'RSM']]],
-  ['connection_5fclose',['connection_close',['../structmg__callbacks.html#a74c9d71a6ff9c78bbef39d785e5f4a3d',1,'mg_callbacks']]],
-  ['content_5flength',['content_length',['../structmg__request__info.html#aa1603acb1f2be0de643ebb1e352fdc01',1,'mg_request_info::content_length()'],['../structmg__response__info.html#a26f05559505cae87828be45aec41a1ed',1,'mg_response_info::content_length()']]]
+  ['humi',['humi',['../namespacedht__example.html#aa29a1963165e7dd96f5df445ec766d05',1,'dht_example']]],
+  ['humidity',['humidity',['../namespacedht__example.html#a6a4209a3087dfc1383829ca5e93baaf5',1,'dht_example.humidity()'],['../namespacedht__temp.html#acb8397013c741f30fc13f3a1996a3b26',1,'dht_temp.humidity()'],['../namespaceRSM.html#a4885de852e530e0a081d8be9e71a0b2f',1,'RSM.humidity()']]],
+  ['humidity_5fseries',['humidity_series',['../namespacedht__temp.html#ae20062f347c7476267f59029269fe4e8',1,'dht_temp.humidity_series()'],['../namespaceRSM.html#a4374ffb38b80f919c0db9706b19b439a',1,'RSM.humidity_series()']]]
 ];

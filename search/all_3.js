@@ -1,13 +1,17 @@
 var searchData=
 [
-  ['base',['base',['../classmariadb_1_1exception_1_1base.html',1,'mariadb::exception']]],
-  ['base',['base',['../classmariadb_1_1exception_1_1base.html#a229b32036c4a460cd2b5cd8ab2703e1c',1,'mariadb::exception::base::base()'],['../classmariadb_1_1exception_1_1base.html#a4a54fbdd831296df2a4ddf0c374c06de',1,'mariadb::exception::base::base(u32 error_id, const std::string &amp;error)'],['../classmariadb_1_1exception_1_1base.html#a45fccca78fd70385f12dc3c00923111d',1,'mariadb::exception::base::base(const std::string &amp;error)']]],
-  ['begin_5frequest',['begin_request',['../structmg__callbacks.html#aa9a778dfb6c14fdb615d9ef01cf5f6f2',1,'mg_callbacks']]],
-  ['bind',['bind',['../classmariadb_1_1bind.html',1,'mariadb']]],
-  ['bind',['bind',['../classmariadb_1_1bind.html#ab58cf5e069a4b2f85d0a1154f8ea073d',1,'mariadb::bind::bind(MYSQL_BIND *mysql_bind)'],['../classmariadb_1_1bind.html#a87d761bd31cd10bd410dbfcd7ee506bc',1,'mariadb::bind::bind(MYSQL_BIND *mysql_bind, MYSQL_FIELD *mysql_field)'],['../classmariadb_1_1bind.html#a9ebd29c78d4b7daf14a55e60c6cd10fa',1,'mariadb::bind::bind(const bind &amp;)=delete'],['../classmariadb_1_1bind.html#aeabeb2e87ae6ebb224906568bc8f938d',1,'mariadb::bind::bind(bind &amp;&amp;)=delete']]],
-  ['bind_2ehpp',['bind.hpp',['../bind_8hpp.html',1,'']]],
-  ['bind_5fref',['bind_ref',['../namespacemariadb.html#adda996681f8cc331ad914c9c7b03ce5c',1,'mariadb']]],
-  ['blob',['blob',['../namespacemariadb_1_1value.html#a42c25072308ac3b70415ce0ed315091caaa87666eaa81f1b95a976b2a82fbd046',1,'mariadb::value']]],
-  ['boolean',['boolean',['../namespacemariadb_1_1value.html#a42c25072308ac3b70415ce0ed315091ca8507489068f4f8dacff3233d9c0bef7b',1,'mariadb::value']]],
-  ['buffer',['buffer',['../classmariadb_1_1bind.html#a893802b7d3c791cb0fe8f61c3dad5ae6',1,'mariadb::bind']]]
+  ['database',['Database',['../classDRESS_1_1Database.html',1,'DRESS']]],
+  ['database',['Database',['../classDRESS_1_1Database.html#a3d1a4a4d4bd92ec0f5f4acc57f5caba9',1,'DRESS::Database']]],
+  ['database_2ecpp',['Database.cpp',['../Database_8cpp.html',1,'']]],
+  ['database_2eh',['Database.h',['../Database_8h.html',1,'']]],
+  ['db',['db',['../namespacedht__temp.html#ace30845dbf4d045c9c74af7a5c528329',1,'dht_temp.db()'],['../namespaceRSM.html#a6b683e7ac2f688068503321c25c2041c',1,'RSM.db()']]],
+  ['dbcursor',['dbCursor',['../namespacedht__temp.html#a644bb09d6dcd9bb84fc1a5eaee68e751',1,'dht_temp.dbCursor()'],['../namespaceRSM.html#aec690fa3d2c9683a0d4bc6482fe9d047',1,'RSM.dbCursor()']]],
+  ['dht11_5fdat',['dht11_dat',['../dht__example_8c.html#aff628fc38fa6d2bacb65558a8402f926',1,'dht_example.c']]],
+  ['dht_5fexample',['dht_example',['../namespacedht__example.html',1,'']]],
+  ['dht_5fexample_2ec',['dht_example.c',['../dht__example_8c.html',1,'']]],
+  ['dht_5fexample_2epy',['dht_example.py',['../dht__example_8py.html',1,'']]],
+  ['dht_5ftemp',['dht_temp',['../namespacedht__temp.html',1,'']]],
+  ['dht_5ftemp_2epy',['dht_temp.py',['../dht__temp_8py.html',1,'']]],
+  ['dhtpin',['DHTPIN',['../dht__example_8c.html#a757bb4e2bff6148de6ef3989b32a0126',1,'dht_example.c']]],
+  ['dress',['DRESS',['../namespaceDRESS.html',1,'']]]
 ];

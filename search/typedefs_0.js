@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['account_5fref',['account_ref',['../namespacemariadb.html#a05a1569ec2414cf48d53a27d7b159a03',1,'mariadb']]]
+  ['handlerptr_5ft',['HandlerPtr_t',['../classDRESS_1_1CivetWebServer.html#a20906c9ae5417a392d19904b121ed637',1,'DRESS::CivetWebServer']]]
 ];

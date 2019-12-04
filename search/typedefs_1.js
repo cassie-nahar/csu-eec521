@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bind_5fref',['bind_ref',['../namespacemariadb.html#adda996681f8cc331ad914c9c7b03ce5c',1,'mariadb']]]
+  ['ptr_5ft',['ptr_t',['../classDRESS_1_1Database.html#a86202fe65021c131ff4f18d496b0878a',1,'DRESS::Database::ptr_t()'],['../classDRESS_1_1WebServer.html#a593b7147205d9fed01d0eed6633c53de',1,'DRESS::WebServer::ptr_t()']]]
 ];

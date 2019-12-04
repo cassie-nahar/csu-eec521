@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dhtpin',['DHTPIN',['../dht__example_8c.html#a757bb4e2bff6148de6ef3989b32a0126',1,'dht_example.c']]]
+  ['maxtimings',['MAXTIMINGS',['../dht__example_8c.html#ae5bff2303df6eb64654365e5d0fd1e9e',1,'dht_example.c']]]
 ];
