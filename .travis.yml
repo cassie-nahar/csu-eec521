@@ -21,7 +21,7 @@ script:
   - cmake --build . --target all --parallel $[`nproc`+1]
   - cmake ..
   - cmake --build . --target all --parallel $[`nproc`+1]
-before_deploy:
+after_success:
   - cd $TRAVIS_BUILD_DIR
   - wget https://downloads.sourceforge.net/project/plantuml/plantuml.jar
   - sudo apt-get -y install doxygen graphviz
