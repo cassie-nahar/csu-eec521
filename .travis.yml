@@ -26,6 +26,9 @@ after_success:
   - wget https://downloads.sourceforge.net/project/plantuml/plantuml.jar
   - sudo apt-get -y install doxygen graphviz
   - doxygen Doxyfile
+  - eval "$(curl -sL https://raw.githubusercontent.com/ryuichis/oclint-cpp-travis-ci-examples/master/oclint-ci-install.sh)"
+  - cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON .
+  - oclint-json-compilation-database -v -- -report-type html -o docs/html/oclint.html
 deploy:
   provider: pages
   skip_cleanup: true

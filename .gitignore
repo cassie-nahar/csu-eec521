@@ -5,6 +5,11 @@
 bin/*
 docs/*
 deps/*
+build/*
 *.user
 *.autosave
 QtCreatorDeployment.txt
+
+# OCLint output files
+compile_commands.json
+report.html
