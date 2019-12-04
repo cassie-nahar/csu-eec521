@@ -15,7 +15,7 @@
 			window.onload = function () {
 			    function drawCanvas() {
 				    $.getJSON("db", function(newData) {
-					    var sensor_numbers = newData.result.map(result => result.sensor_number).filter(unique);
+					    var sensor_numbers = newData.result.map(result => result.sensor_number).filter(unique).sort();
 						var temperature_data_entries = [];
 						var humidity_data_entries = [];
 						sensor_numbers.forEach(sensor_number => {

@@ -5,6 +5,9 @@
 
 language: cpp
 os: linux
+branches:
+  except:
+    - gh-pages
 before_install:
   - curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
   - sudo apt-get remove --purge mysql-server mysql-client libmysqlclient-dev
