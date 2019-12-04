@@ -1,3 +1,7 @@
+# File:        DRESS/.gitignore
+# Authors:     Kevin Rak
+# Description: This file defines the paths to be ignored by git
+
 bin/*
 docs/*
 deps/*

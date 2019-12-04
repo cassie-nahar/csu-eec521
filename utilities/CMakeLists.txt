@@ -1,3 +1,8 @@
+# File:        DRESS/utilities/CMakeLists.txt
+# Authors:     Kevin Rak
+# Description: This is the utilities project file. It defines all of the
+#              utility targets which encapsulate any external dependencies.
+
 cmake_minimum_required(VERSION 3.5)
 project(DRESS_UTILITIES)
 

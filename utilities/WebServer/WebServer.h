@@ -1,3 +1,8 @@
+// File:        DRESS/utilities/WebServer/WebServer.h
+// Authors:     Kevin Rak
+// Description: This is the WebServer definition file. It is responsible for
+//              defining the abstract WebServer class and a static Create method.
+
 #ifndef WEBSERVER_H
 #define WEBSERVER_H
 

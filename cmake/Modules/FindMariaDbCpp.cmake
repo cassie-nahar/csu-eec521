@@ -1,3 +1,7 @@
+# File:        DRESS/cmake/Modules/FindMariaDbCpp.cmake
+# Authors:     Kevin Rak
+# Description: This is the CMake file responsible for locating MariaDbCpp and creating targets for it.
+
 INCLUDE(LibFindMacros)
 
 if(NOT TARGET MariaDbCpp::Headers)

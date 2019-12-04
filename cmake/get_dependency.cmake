@@ -1,3 +1,8 @@
+# File:        DRESS/cmake/get_dependency.cmake
+# Authors:     Kevin Rak
+# Description: This file hides the CMake details for how to find project dependencies.
+#              This simplifies the other CMake project files.
+
 include_guard(GLOBAL)
 
 # Tell CMake how to find dependencies

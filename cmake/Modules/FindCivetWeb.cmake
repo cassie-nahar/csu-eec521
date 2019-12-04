@@ -1,3 +1,7 @@
+# File:        DRESS/cmake/Modules/FindCivetWeb.cmake
+# Authors:     Kevin Rak
+# Description: This is the CMake file responsible for locating CivetWeb and creating targets for it.
+
 INCLUDE(LibFindMacros)
 
 if(NOT TARGET CivetWeb::Headers)

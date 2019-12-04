@@ -1,3 +1,8 @@
+// File:        DRESS/utilities/CivetWebServer/private/CivetWebServer.cpp
+// Authors:     Kevin Rak
+// Description: This is the CivetWebServer implementation file. It is responsible for
+//              implenting the behaviors for Get and Post handlers, as well as their creation.
+
 #include <string.h> // memset
 #include <iostream> // std::cout
 #include <unistd.h> // std::sleep

@@ -1,3 +1,7 @@
+# File:        DRESS/cmake/get_CivetWeb.cmake
+# Authors:     Kevin Rak
+# Description: This is the CMake file responsible for finding or acquiring the CivetWeb external dependency.
+
 include(${CMAKE_SOURCE_DIR}/cmake/get_dependency.cmake)
 
 if (BUILD_CIVETWEB)

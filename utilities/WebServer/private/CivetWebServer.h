@@ -1,3 +1,8 @@
+// File:        DRESS/utilities/CivetWebServer/private/CivetWebServer.h
+// Authors:     Kevin Rak
+// Description: This is the CivetWebServer definition file. It is responsible for
+//              defining the behaviors for Get and Post handlers, as well as their creation.
+
 #ifndef CIVETWEBSERVER_H
 #define CIVETWEBSERVER_H
 

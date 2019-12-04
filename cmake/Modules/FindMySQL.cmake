@@ -1,3 +1,7 @@
+# File:        DRESS/cmake/Modules/FindMySQL.cmake
+# Authors:     Kevin Rak
+# Description: This is the CMake file responsible for locating MySQL and creating targets for it.
+
 INCLUDE(LibFindMacros)
 
 if(NOT TARGET MySQL::Headers)

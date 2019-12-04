@@ -1,3 +1,8 @@
+// File:        DRESS/utilities/Database/Database.h
+// Authors:     Kevin Rak
+// Description: This is the Database definition file. It is responsible for
+//              defining the abstract Database class and a static Create method.
+
 #ifndef DATABASE_H
 #define DATABASE_H
 

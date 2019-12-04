@@ -1,3 +1,8 @@
+# File:        DRESS/CMakeLists.txt
+# Authors:     Kevin Rak
+#              Eric Eilberg
+# Description: This is the main project file. It defines all of the important project files and targets.
+
 cmake_minimum_required(VERSION 3.5)
 project(DRESS)
 
@@ -27,5 +32,4 @@ add_custom_target(_files SOURCES
 	Doxyfile
 	cmake/Toolchain-RaspberryPi.cmake
 	cmake/get_dependency.cmake
-	cmake/boost_1.70.0_xc.patch
 )

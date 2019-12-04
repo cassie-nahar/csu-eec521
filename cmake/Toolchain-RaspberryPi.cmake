@@ -1,3 +1,7 @@
+# File:        DRESS/cmake/Toolchain-RaspberryPi.cmake
+# Authors:     Kevin Rak
+# Description: This file defines the required CMake variables for cross-compiling the project
+
 # Define our host system
 SET(CMAKE_SYSTEM_NAME Linux)
 SET(CMAKE_SYSTEM_PROCESSOR arm)

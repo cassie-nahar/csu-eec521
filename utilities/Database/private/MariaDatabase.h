@@ -1,3 +1,8 @@
+// File:        DRESS/utilities/Database/private/MariaDatabase.h
+// Authors:     Kevin Rak
+// Description: This is the MariaDatabase definition file. It is responsible for
+//              defining the behaviors for Getting and Putting information in the database
+
 #ifndef MARIADATABASE_H
 #define MARIADATABASE_H
 

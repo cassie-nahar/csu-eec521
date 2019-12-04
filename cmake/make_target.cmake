@@ -1,3 +1,9 @@
+# File:        DRESS/cmake/make_target.cmake
+# Authors:     Kevin Rak
+# Description: This is the CMake file responsible for simpliying the creation of targets.
+#              This file handles language and build settings, as well as finding the source files
+#              for a particular target using the make_target macro.
+
 include_guard(GLOBAL)
 
 include(ProcessorCount)

@@ -1,3 +1,7 @@
+# File:        DRESS/.travis.yml
+# Authors:     Kevin Rak
+# Description: This file defines the instructions for Travis CI
+
 language: cpp
 os: linux
 before_install:

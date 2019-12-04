@@ -1,3 +1,8 @@
+// File:        DRESS/GUI/main.cpp
+// Authors:     Kevin Rak
+// Description: This is the GUI application entrypoint. It is responsible for defining
+//              the server's GET and POST handlers and their behavior.
+
 #include <unistd.h> // std::sleep
 #include <iostream>
 #include <sstream>

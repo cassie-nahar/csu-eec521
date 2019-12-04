@@ -1,3 +1,7 @@
+# File:        DRESS/cmake/get_MariaDbCpp.cmake
+# Authors:     Kevin Rak
+# Description: This is the CMake file responsible for finding or acquiring the MariaDbCpp external dependency.
+
 include(${CMAKE_SOURCE_DIR}/cmake/get_dependency.cmake)
 
 if (BUILD_MARIADBCPP)

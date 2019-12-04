@@ -1,3 +1,8 @@
+// File:        DRESS/utilities/Database/private/MariaDatabase.cpp
+// Authors:     Kevin Rak
+// Description: This is the MariaDatabase implementation file. It is responsible for
+//              implenting the behaviors for Getting and Putting information in the database
+
 #include <utilities/Database/private/MariaDatabase.h>
 
 namespace DRESS {

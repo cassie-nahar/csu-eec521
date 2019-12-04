@@ -1,3 +1,7 @@
+# File:        DRESS/Doxyfile
+# Authors:     Kevin Rak
+# Description: This file defines the instructions for Doxygen
+
 # Doxyfile 1.8.13
 
 # This file describes the settings to be used by the documentation system
