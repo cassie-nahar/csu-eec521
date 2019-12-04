@@ -12,14 +12,8 @@ script:
   - cmake --build . --target all --parallel $[`nproc`+1]
   - cmake ..
   - cmake --build . --target all --parallel $[`nproc`+1]
-
 after_success:
-
-addons:
-  apt:
-    packages:
-      - doxygen
-script:
+  - sudo apt-get -y install doxygen
   - doxygen ../Doxyfile
 deploy:
   provider: pages
