@@ -22,7 +22,7 @@ before_deploy:
   - cd $TRAVIS_BUILD_DIR
   - wget https://downloads.sourceforge.net/project/plantuml/plantuml.jar
   - sudo apt-get -y install doxygen graphviz
-  - doxygen ../Doxyfile
+  - doxygen Doxyfile
 deploy:
   provider: pages
   skip_cleanup: true
